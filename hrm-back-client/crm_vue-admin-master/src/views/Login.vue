@@ -52,7 +52,7 @@
             //NProgress.start();
             var loginParams = { username: this.ruleForm2.account, password: this.ruleForm2.checkPass };
             requestLogin(loginParams).then(data => {
-              /*this.logining = false;
+              this.logining = false;
               //NProgress.done();
               let { msg, code, user } = data;
               if (code !== 200) {
@@ -68,15 +68,7 @@
           } else {
             console.log('error submit!!');
             return false;
-          }*/
-              var user={
-                      id: 1,
-                      username: 'admin',
-                      password: '123456',
-                      name: '张某某'
-              }
-          sessionStorage.setItem('user', JSON.stringify(user));
-          this.$router.push({ path: '/table' });
+          }
         });
       }
     }
