@@ -4,6 +4,7 @@ import Home from './views/Home.vue'
 import Table from './views/nav1/Table.vue'
 import echarts from './views/charts/echarts.vue'
 import CourseType from './views/course_manger/CourseType.vue'
+import TenantRegister from './views/TenantRegister/TenantRegister.vue'
 
 let routes = [
     {
@@ -35,7 +36,7 @@ let routes = [
         iconCls: 'el-icon-message',//图标样式class
         children: [
             { path: '/table', component: Table, name: '用户管理' },
-            { path: '/table', component: Table, name: '角色管理' },
+            { path: '/TenantRegister', component: TenantRegister, name: '租户注册' },
 
         ]
     },
@@ -49,10 +50,17 @@ let routes = [
         ]
     },
     {
+        path: '/',
+        hidden: true,
+        component: TenantRegister,
+        redirect: { path: '/TenantRegister' }
+    },
+    {
         path: '*',
         hidden: true,
         redirect: { path: '/404' }
-    }
+    },
+
 ];
 
 export default routes;

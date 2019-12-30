@@ -89,16 +89,16 @@
                    <el-col :span="12">
                        <div class="grid-content bg-purple-light">
                            <el-form-item label="课程描述" >
-                               <el-input type="textarea" v-model="editForm.description" ></el-input>
+                               <el-input CLASS="el-textarea__inner" type="textarea" v-model="editForm.description" ></el-input>
                            </el-form-item>
                            <el-upload
                                class="avatar-uploader"
                                action="https://jsonplaceholder.typicode.com/posts/"
                                :show-file-list="false"
                                :on-success="handleAvatarSuccess"
-                               :before-upload="beforeAvatarUpload" style="padding-left: 100px;padding-top: 10px">
+                               :before-upload="beforeAvatarUpload" style="padding-left: 80px;padding-top: 10px">
                            <img v-if="imageUrl" :src="imageUrl" class="avatar">
-                           <i v-else class="el-icon-plus avatar-uploader-icon" style="padding: 40px;"></i>
+                           <i v-else class="el-icon-plus avatar-uploader-icon" style="padding: 50px;"></i>
                        </el-upload>
                        </div>
                    </el-col>
@@ -150,6 +150,9 @@
         width: 178px;
         height: 178px;
         display: block;
+    }
+    textarea{
+        min-height: 120px;
     }
 </style>
 
